@@ -38,9 +38,17 @@
         <script src="data/CorredorInterocenicoOaxaca_0.js"></script>
         <script src="data/CorredorInterocenicoVeracruz_1.js"></script>
         <script src="data/IstmodeTehuantepec_2.js"></script>
-        <script src="data/HospitalesdeEspecialidad_3.js"></script>
-        <script src="data/HospitalesdeAtencinMdica_4.js"></script>
-        <script src="data/UnidadesdeAtencinMdicadePrimerNivel_5.js"></script>
+        <script src="data/MinutaRequisitada_3.js"></script>
+        <script src="data/QRGenerado_4.js"></script>
+        <script src="data/HospitalesdeEspecialidad_5.js"></script>
+        <script src="data/HospitalesdeAtencinMdica_6.js"></script>
+        <script src="data/UnidadesdeAtencinMdicadePrimerNivel_7.js"></script>
+        <script src="data/ServiciosdeAguaPotable_8.js"></script>
+        <script src="data/ServiciosdeMercados_9.js"></script>
+        <script src="data/ServiciosdePanteones_10.js"></script>
+        <script src="data/ServiciosdeRastros_11.js"></script>
+        <script src="data/ServiciosdeResiduosSlidos_12.js"></script>
+        <script src="data/ServiciosdeAguasResiduales_13.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -124,8 +132,8 @@
                         <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Corredor</th>\
-                        <td>' + (feature.properties['Municipios Corredor Oaxaca — Hoja1_Corredor'] !== null ? autolinker.link(feature.properties['Municipios Corredor Oaxaca — Hoja1_Corredor'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Oaxaca_Corredor'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Oaxaca_Corredor'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -193,19 +201,19 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Jurisdicción S.</th>\
-                        <td>' + (feature.properties['Municipios Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Municipios Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Minuta</th>\
-                        <td>' + (feature.properties['Municipios Veracruz_Minutas Recibidas'] !== null ? autolinker.link(feature.properties['Municipios Veracruz_Minutas Recibidas'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Mnuta Firmada</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">QR Entregado</th>\
-                        <td>' + (feature.properties['Municipios Veracruz_Estatus'] !== null ? autolinker.link(feature.properties['Municipios Veracruz_Estatus'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Estatus'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Estatus'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Corredor</th>\
-                        <td>' + (feature.properties['Municipios Veracruz_Corredor Interoceánico'] !== null ? autolinker.link(feature.properties['Municipios Veracruz_Corredor Interoceánico'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -306,7 +314,165 @@
             styles: [style_IstmodeTehuantepec_2_0,style_IstmodeTehuantepec_2_1,]
         });
         bounds_group.addLayer(layer_IstmodeTehuantepec_2);
-        function pop_HospitalesdeEspecialidad_3(feature, layer) {
+        function pop_MinutaRequisitada_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Clave</th>\
+                        <td>' + (feature.properties['ID_MUN'] !== null ? autolinker.link(feature.properties['ID_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['NOM_MUN'] !== null ? autolinker.link(feature.properties['NOM_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Juriasdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Minuta Firmada</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">QR Entregado</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Estatus'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Estatus'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_MinutaRequisitada_3_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_MinutaRequisitada_3rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_MinutaRequisitada_3',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(99,255,156,0.5215686274509804)',
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_MinutaRequisitada_3');
+        map.getPane('pane_MinutaRequisitada_3').style.zIndex = 403;
+        map.getPane('pane_MinutaRequisitada_3').style['mix-blend-mode'] = 'normal';
+        var layer_MinutaRequisitada_3 = new L.geoJson(json_MinutaRequisitada_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_MinutaRequisitada_3',
+            layerName: 'layer_MinutaRequisitada_3',
+            pane: 'pane_MinutaRequisitada_3',
+            onEachFeature: pop_MinutaRequisitada_3,
+            style: style_MinutaRequisitada_3_0,
+        });
+        bounds_group.addLayer(layer_MinutaRequisitada_3);
+        function pop_QRGenerado_4(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Clave</th>\
+                        <td>' + (feature.properties['ID_MUN'] !== null ? autolinker.link(feature.properties['ID_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['NOM_MUN'] !== null ? autolinker.link(feature.properties['NOM_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Minuta Firmada</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">QR Generado</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Estatus'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Estatus'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_QRGenerado_4_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_QRGenerado_4rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_QRGenerado_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(23,138,38,1.0)',
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_QRGenerado_4');
+        map.getPane('pane_QRGenerado_4').style.zIndex = 404;
+        map.getPane('pane_QRGenerado_4').style['mix-blend-mode'] = 'normal';
+        var layer_QRGenerado_4 = new L.geoJson(json_QRGenerado_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_QRGenerado_4',
+            layerName: 'layer_QRGenerado_4',
+            pane: 'pane_QRGenerado_4',
+            onEachFeature: pop_QRGenerado_4,
+            style: style_QRGenerado_4_0,
+        });
+        bounds_group.addLayer(layer_QRGenerado_4);
+        function pop_HospitalesdeEspecialidad_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -344,6 +510,14 @@
                         <th scope="row">Estatus</th>\
                         <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -351,15 +525,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_HospitalesdeEspecialidad_3_0(feature) {
+        function style_HospitalesdeEspecialidad_5_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_HospitalesdeEspecialidad_3rule0_eval_expression(context)) {
+            if (exp_HospitalesdeEspecialidad_5rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_HospitalesdeEspecialidad_3',
+                pane: 'pane_HospitalesdeEspecialidad_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -377,27 +551,26 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_HospitalesdeEspecialidad_3');
-        map.getPane('pane_HospitalesdeEspecialidad_3').style.zIndex = 403;
-        map.getPane('pane_HospitalesdeEspecialidad_3').style['mix-blend-mode'] = 'normal';
-        var layer_HospitalesdeEspecialidad_3 = new L.geoJson(json_HospitalesdeEspecialidad_3, {
+        map.createPane('pane_HospitalesdeEspecialidad_5');
+        map.getPane('pane_HospitalesdeEspecialidad_5').style.zIndex = 405;
+        map.getPane('pane_HospitalesdeEspecialidad_5').style['mix-blend-mode'] = 'normal';
+        var layer_HospitalesdeEspecialidad_5 = new L.geoJson(json_HospitalesdeEspecialidad_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_HospitalesdeEspecialidad_3',
-            layerName: 'layer_HospitalesdeEspecialidad_3',
-            pane: 'pane_HospitalesdeEspecialidad_3',
-            onEachFeature: pop_HospitalesdeEspecialidad_3,
+            dataVar: 'json_HospitalesdeEspecialidad_5',
+            layerName: 'layer_HospitalesdeEspecialidad_5',
+            pane: 'pane_HospitalesdeEspecialidad_5',
+            onEachFeature: pop_HospitalesdeEspecialidad_5,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_HospitalesdeEspecialidad_3_0(feature));
+                return L.circleMarker(latlng, style_HospitalesdeEspecialidad_5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_HospitalesdeEspecialidad_3);
-        map.addLayer(layer_HospitalesdeEspecialidad_3);
-        function pop_HospitalesdeAtencinMdica_4(feature, layer) {
+        bounds_group.addLayer(layer_HospitalesdeEspecialidad_5);
+        function pop_HospitalesdeAtencinMdica_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -435,6 +608,14 @@
                         <th scope="row">Estatus</th>\
                         <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -442,15 +623,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_HospitalesdeAtencinMdica_4_0(feature) {
+        function style_HospitalesdeAtencinMdica_6_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_HospitalesdeAtencinMdica_4rule0_eval_expression(context)) {
+            if (exp_HospitalesdeAtencinMdica_6rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_HospitalesdeAtencinMdica_4',
+                pane: 'pane_HospitalesdeAtencinMdica_6',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -468,27 +649,26 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_HospitalesdeAtencinMdica_4');
-        map.getPane('pane_HospitalesdeAtencinMdica_4').style.zIndex = 404;
-        map.getPane('pane_HospitalesdeAtencinMdica_4').style['mix-blend-mode'] = 'normal';
-        var layer_HospitalesdeAtencinMdica_4 = new L.geoJson(json_HospitalesdeAtencinMdica_4, {
+        map.createPane('pane_HospitalesdeAtencinMdica_6');
+        map.getPane('pane_HospitalesdeAtencinMdica_6').style.zIndex = 406;
+        map.getPane('pane_HospitalesdeAtencinMdica_6').style['mix-blend-mode'] = 'normal';
+        var layer_HospitalesdeAtencinMdica_6 = new L.geoJson(json_HospitalesdeAtencinMdica_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_HospitalesdeAtencinMdica_4',
-            layerName: 'layer_HospitalesdeAtencinMdica_4',
-            pane: 'pane_HospitalesdeAtencinMdica_4',
-            onEachFeature: pop_HospitalesdeAtencinMdica_4,
+            dataVar: 'json_HospitalesdeAtencinMdica_6',
+            layerName: 'layer_HospitalesdeAtencinMdica_6',
+            pane: 'pane_HospitalesdeAtencinMdica_6',
+            onEachFeature: pop_HospitalesdeAtencinMdica_6,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_HospitalesdeAtencinMdica_4_0(feature));
+                return L.circleMarker(latlng, style_HospitalesdeAtencinMdica_6_0(feature));
             },
         });
-        bounds_group.addLayer(layer_HospitalesdeAtencinMdica_4);
-        map.addLayer(layer_HospitalesdeAtencinMdica_4);
-        function pop_UnidadesdeAtencinMdicadePrimerNivel_5(feature, layer) {
+        bounds_group.addLayer(layer_HospitalesdeAtencinMdica_6);
+        function pop_UnidadesdeAtencinMdicadePrimerNivel_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -526,6 +706,14 @@
                         <th scope="row">Estatus</th>\
                         <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -533,15 +721,15 @@
             var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
             popup.setContent(updatedContent);
         }
-        function style_UnidadesdeAtencinMdicadePrimerNivel_5_0(feature) {
+        function style_UnidadesdeAtencinMdicadePrimerNivel_7_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_UnidadesdeAtencinMdicadePrimerNivel_5rule0_eval_expression(context)) {
+            if (exp_UnidadesdeAtencinMdicadePrimerNivel_7rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_UnidadesdeAtencinMdicadePrimerNivel_5',
+                pane: 'pane_UnidadesdeAtencinMdicadePrimerNivel_7',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -559,26 +747,489 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_UnidadesdeAtencinMdicadePrimerNivel_5');
-        map.getPane('pane_UnidadesdeAtencinMdicadePrimerNivel_5').style.zIndex = 405;
-        map.getPane('pane_UnidadesdeAtencinMdicadePrimerNivel_5').style['mix-blend-mode'] = 'normal';
-        var layer_UnidadesdeAtencinMdicadePrimerNivel_5 = new L.geoJson(json_UnidadesdeAtencinMdicadePrimerNivel_5, {
+        map.createPane('pane_UnidadesdeAtencinMdicadePrimerNivel_7');
+        map.getPane('pane_UnidadesdeAtencinMdicadePrimerNivel_7').style.zIndex = 407;
+        map.getPane('pane_UnidadesdeAtencinMdicadePrimerNivel_7').style['mix-blend-mode'] = 'normal';
+        var layer_UnidadesdeAtencinMdicadePrimerNivel_7 = new L.geoJson(json_UnidadesdeAtencinMdicadePrimerNivel_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_UnidadesdeAtencinMdicadePrimerNivel_5',
-            layerName: 'layer_UnidadesdeAtencinMdicadePrimerNivel_5',
-            pane: 'pane_UnidadesdeAtencinMdicadePrimerNivel_5',
-            onEachFeature: pop_UnidadesdeAtencinMdicadePrimerNivel_5,
+            dataVar: 'json_UnidadesdeAtencinMdicadePrimerNivel_7',
+            layerName: 'layer_UnidadesdeAtencinMdicadePrimerNivel_7',
+            pane: 'pane_UnidadesdeAtencinMdicadePrimerNivel_7',
+            onEachFeature: pop_UnidadesdeAtencinMdicadePrimerNivel_7,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_UnidadesdeAtencinMdicadePrimerNivel_5_0(feature));
+                return L.circleMarker(latlng, style_UnidadesdeAtencinMdicadePrimerNivel_7_0(feature));
             },
         });
-        bounds_group.addLayer(layer_UnidadesdeAtencinMdicadePrimerNivel_5);
-        map.addLayer(layer_UnidadesdeAtencinMdicadePrimerNivel_5);
+        bounds_group.addLayer(layer_UnidadesdeAtencinMdicadePrimerNivel_7);
+        function pop_ServiciosdeAguaPotable_8(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['Municipio_'] !== null ? autolinker.link(feature.properties['Municipio_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdeAguaPotable_8_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdeAguaPotable_8rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdeAguaPotable_8',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdeAguaPotable_8.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdeAguaPotable_8');
+        map.getPane('pane_ServiciosdeAguaPotable_8').style.zIndex = 408;
+        map.getPane('pane_ServiciosdeAguaPotable_8').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdeAguaPotable_8 = new L.geoJson(json_ServiciosdeAguaPotable_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdeAguaPotable_8',
+            layerName: 'layer_ServiciosdeAguaPotable_8',
+            pane: 'pane_ServiciosdeAguaPotable_8',
+            onEachFeature: pop_ServiciosdeAguaPotable_8,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdeAguaPotable_8_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdeAguaPotable_8);
+        function pop_ServiciosdeMercados_9(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['Municipio_'] !== null ? autolinker.link(feature.properties['Municipio_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdeMercados_9_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdeMercados_9rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdeMercados_9',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdeMercados_9.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdeMercados_9');
+        map.getPane('pane_ServiciosdeMercados_9').style.zIndex = 409;
+        map.getPane('pane_ServiciosdeMercados_9').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdeMercados_9 = new L.geoJson(json_ServiciosdeMercados_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdeMercados_9',
+            layerName: 'layer_ServiciosdeMercados_9',
+            pane: 'pane_ServiciosdeMercados_9',
+            onEachFeature: pop_ServiciosdeMercados_9,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdeMercados_9_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdeMercados_9);
+        function pop_ServiciosdePanteones_10(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['Municipio_'] !== null ? autolinker.link(feature.properties['Municipio_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdePanteones_10_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdePanteones_10rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdePanteones_10',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdePanteones_10.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdePanteones_10');
+        map.getPane('pane_ServiciosdePanteones_10').style.zIndex = 410;
+        map.getPane('pane_ServiciosdePanteones_10').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdePanteones_10 = new L.geoJson(json_ServiciosdePanteones_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdePanteones_10',
+            layerName: 'layer_ServiciosdePanteones_10',
+            pane: 'pane_ServiciosdePanteones_10',
+            onEachFeature: pop_ServiciosdePanteones_10,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdePanteones_10_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdePanteones_10);
+        function pop_ServiciosdeRastros_11(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td class="visible-with-data" id="Municipio_">' + (feature.properties['Municipio_'] !== null ? autolinker.link(feature.properties['Municipio_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdeRastros_11_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdeRastros_11rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdeRastros_11',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdeRastros_11.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdeRastros_11');
+        map.getPane('pane_ServiciosdeRastros_11').style.zIndex = 411;
+        map.getPane('pane_ServiciosdeRastros_11').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdeRastros_11 = new L.geoJson(json_ServiciosdeRastros_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdeRastros_11',
+            layerName: 'layer_ServiciosdeRastros_11',
+            pane: 'pane_ServiciosdeRastros_11',
+            onEachFeature: pop_ServiciosdeRastros_11,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdeRastros_11_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdeRastros_11);
+        function pop_ServiciosdeResiduosSlidos_12(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['Municipio_'] !== null ? autolinker.link(feature.properties['Municipio_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Jurisdicción S.</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Jurisd.'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdeResiduosSlidos_12_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdeResiduosSlidos_12rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdeResiduosSlidos_12',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdeResiduosSlidos_12.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdeResiduosSlidos_12');
+        map.getPane('pane_ServiciosdeResiduosSlidos_12').style.zIndex = 412;
+        map.getPane('pane_ServiciosdeResiduosSlidos_12').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdeResiduosSlidos_12 = new L.geoJson(json_ServiciosdeResiduosSlidos_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdeResiduosSlidos_12',
+            layerName: 'layer_ServiciosdeResiduosSlidos_12',
+            pane: 'pane_ServiciosdeResiduosSlidos_12',
+            onEachFeature: pop_ServiciosdeResiduosSlidos_12,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdeResiduosSlidos_12_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdeResiduosSlidos_12);
+        function pop_ServiciosdeAguasResiduales_13(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Fecha de Registro</th>\
+                        <td>' + (feature.properties['Registro'] !== null ? autolinker.link(feature.properties['Registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Municipio</th>\
+                        <td>' + (feature.properties['Municipio'] !== null ? autolinker.link(feature.properties['Municipio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Localidad</th>\
+                        <td>' + (feature.properties['Localidad'] !== null ? autolinker.link(feature.properties['Localidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Corredor Interoceánico</th>\
+                        <td>' + (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+            var popup = layer.getPopup();
+            var content = popup.getContent();
+            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+            popup.setContent(updatedContent);
+        }
+        function style_ServiciosdeAguasResiduales_13_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_ServiciosdeAguasResiduales_13rule0_eval_expression(context)) {
+                  return {
+                pane: 'pane_ServiciosdeAguasResiduales_13',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ServiciosdeAguasResiduales_13.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
+            }
+        }
+        map.createPane('pane_ServiciosdeAguasResiduales_13');
+        map.getPane('pane_ServiciosdeAguasResiduales_13').style.zIndex = 413;
+        map.getPane('pane_ServiciosdeAguasResiduales_13').style['mix-blend-mode'] = 'normal';
+        var layer_ServiciosdeAguasResiduales_13 = new L.geoJson(json_ServiciosdeAguasResiduales_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_ServiciosdeAguasResiduales_13',
+            layerName: 'layer_ServiciosdeAguasResiduales_13',
+            pane: 'pane_ServiciosdeAguasResiduales_13',
+            onEachFeature: pop_ServiciosdeAguasResiduales_13,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_ServiciosdeAguasResiduales_13_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_ServiciosdeAguasResiduales_13);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -590,17 +1241,17 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Unidades de Atención Médica de Primer Nivel<br /><table><tr><td style="text-align: center;"><img src="legend/UnidadesdeAtencinMdicadePrimerNivel_5_UnidadesdeAtenciónMédicadePrimerNivel0.png" /></td><td>Unidades de Atención Médica de Primer Nivel</td></tr></table>': layer_UnidadesdeAtencinMdicadePrimerNivel_5,'Hospitales de Atención Médica<br /><table><tr><td style="text-align: center;"><img src="legend/HospitalesdeAtencinMdica_4_HospitalesdeAtenciónMédica0.png" /></td><td>Hospitales de Atención Médica</td></tr></table>': layer_HospitalesdeAtencinMdica_4,'Hospitales de Especialidad<br /><table><tr><td style="text-align: center;"><img src="legend/HospitalesdeEspecialidad_3_HospitalesdeEspecialidad0.png" /></td><td>Hospitales de Especialidad</td></tr></table>': layer_HospitalesdeEspecialidad_3,'<img src="legend/IstmodeTehuantepec_2.png" /> Istmo de Tehuantepec': layer_IstmodeTehuantepec_2,'Corredor Interoceánico Veracruz<br /><table><tr><td style="text-align: center;"><img src="legend/CorredorInterocenicoVeracruz_1_CorredorInteroceánico0.png" /></td><td>Corredor Interoceánico</td></tr></table>': layer_CorredorInterocenicoVeracruz_1,'Corredor Interoceánico Oaxaca<br /><table><tr><td style="text-align: center;"><img src="legend/CorredorInterocenicoOaxaca_0_CorredorOaxaca0.png" /></td><td>Corredor Oaxaca</td></tr></table>': layer_CorredorInterocenicoOaxaca_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Servicios de Aguas Residuales<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdeAguasResiduales_13_0.png" /></td><td></td></tr></table>': layer_ServiciosdeAguasResiduales_13,'Servicios de Residuos Sólidos<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdeResiduosSlidos_12_0.png" /></td><td></td></tr></table>': layer_ServiciosdeResiduosSlidos_12,'Servicios de Rastros<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdeRastros_11_0.png" /></td><td></td></tr></table>': layer_ServiciosdeRastros_11,'Servicios de Panteones<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdePanteones_10_0.png" /></td><td></td></tr></table>': layer_ServiciosdePanteones_10,'Servicios de Mercados<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdeMercados_9_0.png" /></td><td></td></tr></table>': layer_ServiciosdeMercados_9,'Servicios de Agua Potable<br /><table><tr><td style="text-align: center;"><img src="legend/ServiciosdeAguaPotable_8_0.png" /></td><td></td></tr></table>': layer_ServiciosdeAguaPotable_8,'Unidades de Atención Médica de Primer Nivel<br /><table><tr><td style="text-align: center;"><img src="legend/UnidadesdeAtencinMdicadePrimerNivel_7_UnidadesdeAtenciónMédicadePrimerNivel0.png" /></td><td>Unidades de Atención Médica de Primer Nivel</td></tr></table>': layer_UnidadesdeAtencinMdicadePrimerNivel_7,'Hospitales de Atención Médica<br /><table><tr><td style="text-align: center;"><img src="legend/HospitalesdeAtencinMdica_6_HospitalesdeAtenciónMédica0.png" /></td><td>Hospitales de Atención Médica</td></tr></table>': layer_HospitalesdeAtencinMdica_6,'Hospitales de Especialidad<br /><table><tr><td style="text-align: center;"><img src="legend/HospitalesdeEspecialidad_5_HospitalesdeEspecialidad0.png" /></td><td>Hospitales de Especialidad</td></tr></table>': layer_HospitalesdeEspecialidad_5,'QR Generado<br /><table><tr><td style="text-align: center;"><img src="legend/QRGenerado_4_CódigoQRentregado0.png" /></td><td>Código QR entregado</td></tr></table>': layer_QRGenerado_4,'Minuta Requisitada<br /><table><tr><td style="text-align: center;"><img src="legend/MinutaRequisitada_3_Conminutarequisitada0.png" /></td><td>Con minuta requisitada</td></tr></table>': layer_MinutaRequisitada_3,'<img src="legend/IstmodeTehuantepec_2.png" /> Istmo de Tehuantepec': layer_IstmodeTehuantepec_2,'Corredor Interoceánico Veracruz<br /><table><tr><td style="text-align: center;"><img src="legend/CorredorInterocenicoVeracruz_1_CorredorInteroceánico0.png" /></td><td>Corredor Interoceánico</td></tr></table>': layer_CorredorInterocenicoVeracruz_1,'Corredor Interoceánico Oaxaca<br /><table><tr><td style="text-align: center;"><img src="legend/CorredorInterocenicoOaxaca_0_CorredorOaxaca0.png" /></td><td>Corredor Oaxaca</td></tr></table>': layer_CorredorInterocenicoOaxaca_0,}).addTo(map);
         setBounds();
-        resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1]);
+        resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1,layer_MinutaRequisitada_3,layer_QRGenerado_4]);
         map.on("zoomend", function(){
-            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1]);
+            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1,layer_MinutaRequisitada_3,layer_QRGenerado_4]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1]);
+            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1,layer_MinutaRequisitada_3,layer_QRGenerado_4]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1]);
+            resetLabels([layer_CorredorInterocenicoOaxaca_0,layer_CorredorInterocenicoVeracruz_1,layer_MinutaRequisitada_3,layer_QRGenerado_4]);
         });
         </script>
     </body>

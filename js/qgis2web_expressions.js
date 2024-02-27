@@ -758,65 +758,169 @@ function fnc_project_color(values, context) {
 
 
 function exp_CorredorInterocenicoOaxaca_0rule0_eval_expression(context) {
-    // "Municipios Corredor Oaxaca — Hoja1_Corredor" = 1
+    // "Corredor Interoceánico Oaxaca_Corredor" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Municipios Corredor Oaxaca — Hoja1_Corredor']  == 1);
+        return (feature.properties['Corredor Interoceánico Oaxaca_Corredor']  == 1);
     } else {
-        return (feature['Municipios Corredor Oaxaca — Hoja1_Corredor']  == 1);
+        return (feature['Corredor Interoceánico Oaxaca_Corredor']  == 1);
     }
 }
 
 
 function exp_CorredorInterocenicoVeracruz_1rule0_eval_expression(context) {
-    // "Municipios Veracruz_Corredor Interoceánico" = 1
+    // "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Municipios Veracruz_Corredor Interoceánico']  == 1);
+        return (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
     } else {
-        return (feature['Municipios Veracruz_Corredor Interoceánico']  == 1);
+        return (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
     }
 }
 
 
-function exp_HospitalesdeEspecialidad_3rule0_eval_expression(context) {
-    // "CLAVE NIVE" = '3'
+function exp_MinutaRequisitada_3rule0_eval_expression(context) {
+    // "Corredor Interoceanico Veracruz_Minutas Recibidas" = 1 AND "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['CLAVE NIVE']  == '3');
+        return ((feature.properties['Corredor Interoceanico Veracruz_Minutas Recibidas']  == 1) && (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return (feature['CLAVE NIVE']  == '3');
+        return ((feature['Corredor Interoceanico Veracruz_Minutas Recibidas']  == 1) && (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     }
 }
 
 
-function exp_HospitalesdeAtencinMdica_4rule0_eval_expression(context) {
-    // "CLAVE NIVE" = '2'
+function exp_QRGenerado_4rule0_eval_expression(context) {
+    // "Corredor Interoceanico Veracruz_Estatus" = 1 AND "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['CLAVE NIVE']  == '2');
+        return ((feature.properties['Corredor Interoceanico Veracruz_Estatus']  == 1) && (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return (feature['CLAVE NIVE']  == '2');
+        return ((feature['Corredor Interoceanico Veracruz_Estatus']  == 1) && (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     }
 }
 
 
-function exp_UnidadesdeAtencinMdicadePrimerNivel_5rule0_eval_expression(context) {
-    // "CLAVE NIVE" = '1'
+function exp_HospitalesdeEspecialidad_5rule0_eval_expression(context) {
+    // "CLAVE NIVE" = '3' AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['CLAVE NIVE']  == '1');
+        return ((feature.properties['CLAVE NIVE']  == '3') && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return (feature['CLAVE NIVE']  == '1');
+        return ((feature['CLAVE NIVE']  == '3') && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+    }
+}
+
+
+function exp_HospitalesdeAtencinMdica_6rule0_eval_expression(context) {
+    // "CLAVE NIVE" = '2' AND "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['CLAVE NIVE']  == '2') && (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+    } else {
+        return ((feature['CLAVE NIVE']  == '2') && (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+    }
+}
+
+
+function exp_UnidadesdeAtencinMdicadePrimerNivel_7rule0_eval_expression(context) {
+    // "CLAVE NIVE" = 1 AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['CLAVE NIVE']  == 1) && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+    } else {
+        return ((feature['CLAVE NIVE']  == 1) && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+    }
+}
+
+
+function exp_ServiciosdeAguaPotable_8rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    }
+}
+
+
+function exp_ServiciosdeMercados_9rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    }
+}
+
+
+function exp_ServiciosdePanteones_10rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    }
+}
+
+
+function exp_ServiciosdeRastros_11rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    }
+}
+
+
+function exp_ServiciosdeResiduosSlidos_12rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    }
+}
+
+
+function exp_ServiciosdeAguasResiduales_13rule0_eval_expression(context) {
+    // "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
+    } else {
+        return (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1);
     }
 }
