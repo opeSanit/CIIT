@@ -810,40 +810,40 @@ function exp_QRGenerado_4rule0_eval_expression(context) {
 
 
 function exp_HospitalesdeEspecialidad_5rule0_eval_expression(context) {
-    // "CLAVE NIVE" = '3' AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+    // CLAVE_NIVE = '3' AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return ((feature.properties['CLAVE NIVE']  == '3') && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature.properties['CLAVE_NIVE']  == '3') && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return ((feature['CLAVE NIVE']  == '3') && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature['CLAVE_NIVE']  == '3') && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     }
 }
 
 
 function exp_HospitalesdeAtencinMdica_6rule0_eval_expression(context) {
-    // "CLAVE NIVE" = '2' AND "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+    // CLAVE_NIVE = '2' AND "Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return ((feature.properties['CLAVE NIVE']  == '2') && (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature.properties['CLAVE_NIVE']  == '2') && (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return ((feature['CLAVE NIVE']  == '2') && (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature['CLAVE_NIVE']  == '2') && (feature['Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     }
 }
 
 
 function exp_UnidadesdeAtencinMdicadePrimerNivel_7rule0_eval_expression(context) {
-    // "CLAVE NIVE" = 1 AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
+    // CLAVE_NIVE = 1 AND "Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return ((feature.properties['CLAVE NIVE']  == 1) && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature.properties['CLAVE_NIVE']  == 1) && (feature.properties['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     } else {
-        return ((feature['CLAVE NIVE']  == 1) && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
+        return ((feature['CLAVE_NIVE']  == 1) && (feature['Corredor Interoceánico Veracruz_Corredor Interoceanico Veracruz_Corredor Interoce�nico']  == 1));
     }
 }
 

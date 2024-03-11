@@ -115,7 +115,7 @@
         map.getPane('pane_GoogleSatellite_0').style.zIndex = 400;
         var layer_GoogleSatellite_0 = L.tileLayer('http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
             pane: 'pane_GoogleSatellite_0',
-            opacity: 1.0,
+            opacity: 0.677,
             attribution: '',
             minZoom: 1,
             maxZoom: 28,
@@ -246,6 +246,18 @@
                         <th scope="row">Total de Servicios</th>\
                         <td>' + (feature.properties['Vigilancia Proactiva — Hoja1_Totales'] !== null ? autolinker.link(feature.properties['Vigilancia Proactiva — Hoja1_Totales'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Primer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Segundo Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Tercer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -346,6 +358,18 @@
                         <th scope="row">Total de Servicios</th>\
                         <td>' + (feature.properties['Vigilancia Proactiva — Hoja1_Totales'] !== null ? autolinker.link(feature.properties['Vigilancia Proactiva — Hoja1_Totales'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Primer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Segundo Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Tercer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -445,6 +469,18 @@
                         <th scope="row">Total de Servicios</th>\
                         <td>' + (feature.properties['Vigilancia Proactiva — Hoja1_Totales'] !== null ? autolinker.link(feature.properties['Vigilancia Proactiva — Hoja1_Totales'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Primer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Primer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Segundo Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Segundo Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Unidades de Atención de Tercer Nivel</th>\
+                        <td class="visible-with-data" id="Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel">' + (feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'] !== null ? autolinker.link(feature.properties['Municipios Corredor Veracruz - Clues — Hoja1_Tercer Nivel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
@@ -505,16 +541,16 @@
                         <td>' + (feature.properties['CLUES'] !== null ? autolinker.link(feature.properties['CLUES'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Clave Nivel Atención</th>\
-                        <td>' + (feature.properties['CLAVE NIVE'] !== null ? autolinker.link(feature.properties['CLAVE NIVE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Clave de Nivel de Atención</th>\
+                        <td>' + (feature.properties['CLAVE_NIVE'] !== null ? autolinker.link(feature.properties['CLAVE_NIVE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Nivel de Atención</th>\
-                        <td>' + (feature.properties['NIVEL ATEN'] !== null ? autolinker.link(feature.properties['NIVEL ATEN'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['NIVEL_ATEN'] !== null ? autolinker.link(feature.properties['NIVEL_ATEN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Nombre de Institución</th>\
-                        <td>' + (feature.properties['NOMBRE DE'] !== null ? autolinker.link(feature.properties['NOMBRE DE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nombre de la Institución</th>\
+                        <td>' + (feature.properties['NOMBRE_DE'] !== null ? autolinker.link(feature.properties['NOMBRE_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Municipio</th>\
@@ -526,7 +562,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Estatus</th>\
-                        <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['ESTATUS_DE'] !== null ? autolinker.link(feature.properties['ESTATUS_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Jurisdicción S.</th>\
@@ -603,16 +639,16 @@
                         <td>' + (feature.properties['CLUES'] !== null ? autolinker.link(feature.properties['CLUES'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Clave Nivel Atención</th>\
-                        <td>' + (feature.properties['CLAVE NIVE'] !== null ? autolinker.link(feature.properties['CLAVE NIVE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Clave de Nivel de Atención</th>\
+                        <td>' + (feature.properties['CLAVE_NIVE'] !== null ? autolinker.link(feature.properties['CLAVE_NIVE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Nivel de Atención</th>\
-                        <td>' + (feature.properties['NIVEL ATEN'] !== null ? autolinker.link(feature.properties['NIVEL ATEN'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['NIVEL_ATEN'] !== null ? autolinker.link(feature.properties['NIVEL_ATEN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Nombre de Institución</th>\
-                        <td>' + (feature.properties['NOMBRE DE'] !== null ? autolinker.link(feature.properties['NOMBRE DE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nombre de la Institución</th>\
+                        <td>' + (feature.properties['NOMBRE_DE'] !== null ? autolinker.link(feature.properties['NOMBRE_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Municipio</th>\
@@ -624,7 +660,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Estatus</th>\
-                        <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['ESTATUS_DE'] !== null ? autolinker.link(feature.properties['ESTATUS_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Jurisdicción S.</th>\
@@ -632,7 +668,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Corredor Interoceánico</th>\
-                        <td class="visible-with-data" id="Corredor Interoceanico Veracruz_Corredor Interoce�nico">' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'] !== null ? autolinker.link(feature.properties['Corredor Interoceanico Veracruz_Corredor Interoce�nico'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -701,16 +737,12 @@
                         <td>' + (feature.properties['CLUES'] !== null ? autolinker.link(feature.properties['CLUES'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Clave Nivel Atención</th>\
-                        <td>' + (feature.properties['CLAVE NIVE'] !== null ? autolinker.link(feature.properties['CLAVE NIVE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Clave de Nivel de Atención</th>\
+                        <td>' + (feature.properties['CLAVE_NIVE'] !== null ? autolinker.link(feature.properties['CLAVE_NIVE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Nivel de Atención</th>\
-                        <td>' + (feature.properties['NIVEL ATEN'] !== null ? autolinker.link(feature.properties['NIVEL ATEN'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Nombre de Institución</th>\
-                        <td>' + (feature.properties['NOMBRE DE'] !== null ? autolinker.link(feature.properties['NOMBRE DE'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nombre de la Institución</th>\
+                        <td>' + (feature.properties['NOMBRE_DE'] !== null ? autolinker.link(feature.properties['NOMBRE_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Municipio</th>\
@@ -722,7 +754,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Estatus</th>\
-                        <td>' + (feature.properties['ESTATUS DE'] !== null ? autolinker.link(feature.properties['ESTATUS DE'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['ESTATUS_DE'] !== null ? autolinker.link(feature.properties['ESTATUS_DE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Jurisdicción S.</th>\
